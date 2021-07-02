@@ -1,6 +1,10 @@
+<!--32 part add profile and admin page in views/pages-->
+<!--39 part add admin page in routes-->
 <?php
 use App\services\Page;
+//<!--39-1 if group admin view the page
 if($_SESSION['user'] && $_SESSION['user']['group'] != 2) {
+	//<!--39-2 redirect
     \App\services\Router::redirect ( '/profile');
 }
 ?>

@@ -1,3 +1,7 @@
+<!--13 part add dir components in views
+add head .php page
+add navbar .php page
+-->
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport'

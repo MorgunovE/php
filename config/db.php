@@ -1,6 +1,8 @@
+<!--22-1 add file db in config-->
 <?php
 return [
-	"enable" => true,
+//	22-2 data for init db from phpmyadmin
+	"enable" => true, // enable key for use db
 	"host" => "localhost",
 	"port" => 3307,
 	"user" => "root",
