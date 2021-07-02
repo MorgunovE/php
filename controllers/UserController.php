@@ -1,0 +1,4 @@
+<?php
+/**
+ * Controller for user
+ */
