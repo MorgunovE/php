@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="19f7327c-3c1b-4000-b0d6-eef6a29b1f78" name="f0544089.xsph.ru" url="http://141.8.193.236">
+        <fileTransfer host="141.8.193.236" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="bfbaa813-cfc2-4aa2-94c6-cf5381dc31d5" name="f0558945.xsph.ru" url="http://141.8.192.151">
+        <fileTransfer host="141.8.192.151" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
