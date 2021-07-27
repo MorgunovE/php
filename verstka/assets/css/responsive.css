@@ -1,0 +1,203 @@
+@media(max-width: 1199px) {
+    .blog-content--style2 .meta-post .meta-user {
+        width: 18%;
+    }
+    .blog-content .meta-post .meta-user {
+        width: 45%;
+    }
+
+    .feature-item i{
+        transform: rotateY(0);
+    }
+
+    .feature-item::before{
+        position: unset;
+    }
+
+    .feature-item-area{
+        justify-content: space-around;
+    }
+
+    .feature-item-inner{
+        transform: rotate(0);
+    }
+    .feature-item{
+        padding-top: 45px;
+        transform: rotate(0);
+        display: block;
+        width: calc(50% - 30px);
+        margin: 0 0 30px;
+        justify-content: space-evenly;
+    }
+
+    .feature-item-area.row-2 {
+        justify-content: space-around;
+        padding: 0 52px;
+        margin-top: 0;
+    }
+    .feature-item:hover .title,
+    .feature-item:hover p {
+        color: var(--heading-color);
+    }
+    .feature-item .title,
+    .feature-item p {
+        padding: 10px;
+    }
+}
+@media (max-width: 991px) {
+    .ruddra-next , .ruddra-prev{
+        display: none;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p,span,li{
+        font-size: 14px;
+    }
+    input,textarea{
+        font-size: 14px;
+    }
+    .widget-box .caption{
+        font-size: 20px !important;
+    }
+    .four-not-four-section-wrapper .title {
+        font-size: 80px;
+    }
+    .sidebar{
+        margin-top: 30px;
+    }
+    .call-action-section .button-group {
+        float: left;
+        margin-top: 20px;
+    }
+
+    .price-item .item-price {
+        font-size: 34px;
+    }
+}
+@media (max-width: 767px) {
+    .feature-section .section-header{
+        margin-bottom: 0;
+    }
+    .domain-ext-name{
+        font-size: 18px;
+    }
+    .domain-ext-price{
+        font-size: 18px;
+    }
+    .four-not-four-section-wrapper .title {
+        font-size: 60px;
+    }
+    .blog-content--style2 .meta-post .meta-user {
+        width: 25%;
+    }
+    .testimonial-item {
+        padding: 30px 15px;
+    }
+}
+@media (max-width: 575px) {
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    h5,h5>a{
+        font-size: 16px !important;
+    }
+    p,span,li{
+        font-size: 14px;
+    }
+    input,textarea{
+        font-size: 14px;
+    }
+    .testimonial-item p{
+        font-size: 18px;
+    }
+    .widget-box .caption{
+        font-size: 18px !important;
+    }
+    .inner-banner-content .title {
+        font-size: 28px;
+    }
+    .info-single-item{
+        width: 100%;
+    }
+    .info-single-item::before{
+        display: none;
+    }
+    .search-form{
+        border-radius: 4px;
+        display: block;
+    }
+    .search-form input{
+        width: 100%;
+        border-bottom: 1px solid #e5e5e5;
+        border-radius: 4px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .search-form .form-btn{
+        width: 100%;
+        border-radius: 0;
+    }
+    .nice-select{
+        width: 100%;
+        text-align: center !important;
+    }
+    .meta-post span {
+        font-size: 13px;
+    }
+    .comment-item .comment-content {
+        width: calc(100% - 0px);
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    .server-area{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    }
+    .feature-item{
+        width: calc(100% - 30px);
+    }
+    .change-catagory-area .title {
+        font-size: 22px;
+    }
+    .common-form-style .title {
+        font-size: 22px;
+    }
+}
+@media (max-width: 440px) {
+    .blog-content--style2 .meta-post .meta-user {
+        width: 38%;
+    }
+    .blog-content .meta-post .meta-user {
+        width: 48%;
+    }
+    .feature-item{
+        width: 100%;
+        padding: 10px;
+    }
+    .change-catagory-area {
+        padding: 80px 0;
+    }
+    .common-form-style {
+        padding: 20px;
+    }
+    .feature-item-area{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .feature-item-area.row-2 {
+        padding: 0;
+    }
+}
+@media (max-width: 320px) {
+    .feature-item{
+        width: 100%;
+    }
+}
