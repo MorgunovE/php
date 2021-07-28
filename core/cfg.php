@@ -1,13 +1,8 @@
 <?php
-$dbData = [
-	'dbserver' => 'localhost',
-	'dbuser' => 'root',
-	'dbname' => 'phpU',
-	'dbpass' => '',
-];
+//5
 require_once 'model.php';
 require_once 'controller.php';
-
+//6
 function pr ( $s )
 {
 	echo "<pre>";
