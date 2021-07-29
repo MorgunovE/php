@@ -1,5 +1,31 @@
 <?php
-require_once ('forma.php');
+require_once 'CCurrency.php';
+$usd_ID = 145;
+$rateUSD = new CCurrency();
+$result = $rateUSD->GetRates($rateUSD->startdate, $rateUSD->today, $usd_ID);
+$json = json_encode($result);
+
+include('header.php');
+?>
+    <!-- HTML -->
+    <h1>USD from 01.01.2021</h1>
+    <div id='chartdiv'></div>
+    <table border='1'>
+        <tr>
+            <th>Date</th>
+            <th>Rate</th>
+        </tr>
+			<? foreach ($result as $res) { ?>
+          <tr>
+              <td><?= $res['date'] ?></td>
+              <td><?= $res['value'] ?></td>
+          </tr>
+				<?
+			} ?>
+    </table>
+<?php
+/////////////////////////////
+//require_once ('forma.php');
 ////////////////////////////
 //step
 //1.add CModel in models
