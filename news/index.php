@@ -6,9 +6,14 @@ require_once '../core/cfg.php';
 //6
 $page = new CController;
 $arParams = [
+//  24
+  'LIMIT' => 6,
+//  29
+  'ORDERBY' => 'DATE',
+  'ORDER' => 'DESC'
 ];
 
 include('../view/header.php');
-$result = $page -> SetPage ( 'contacts', $arParams );
+$result = $page->SetPage('news', $arParams);
 //pr ( $result );
 include('../view/footer.php');
