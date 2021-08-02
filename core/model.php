@@ -22,7 +22,13 @@ class Cmodel
 //7
   public function GetData($type, $arData)
   {
-    //7
+//    38
+    if ($type == 'single-news') {
+      $sql = 'SELECT * FROM news WHERE id = '. $arData['news_id'];
+      $res = mysqli_query($this->link, $sql);
+      if ($arRes = mysqli_fetch_assoc($res))
+        $arResult = $arRes;
+    }
     if ($type == 'news') {
 //      28
 //      30
@@ -53,13 +59,27 @@ class Cmodel
     return $arMenu;
   }
 
+  public function GetOptions($option_name) {
+    //    40
+    $sql = 'SELECT * FROM options WHERE name = "'.$option_name .'"';
+    $res = mysqli_query($this->link, $sql);
+    if ($arRes = mysqli_fetch_assoc($res))
+      $option_value = $arRes['value'];
+    return $option_value;
+  }
+//  48
+  public function SetOptions($option_name, $option_value) {
+    $sql = "UPDATE options SET value = '$option_value' WHERE name = '$option_name'";
+    $res = mysqli_query($this->link, $sql);
+  }
   public function GetPhone()
   {
-    $sql = 'SELECT phone FROM contacts';
-    $res = mysqli_query($this->link, $sql);
-    while ($arRes = mysqli_fetch_assoc($res))
-      $arPhone[] = $arRes;
-    return $arPhone;
+//    $sql = 'SELECT phone FROM contacts';
+//    $res = mysqli_query($this->link, $sql);
+//    while ($arRes = mysqli_fetch_assoc($res))
+//      $arPhone[] = $arRes;
+//    return $arPhone;
+    return $this->GetOptions('contact_phone');
   }
 
   public function GetContacts()
@@ -70,6 +90,15 @@ class Cmodel
       $arResult[] = $arRes;
     return $arResult;
   }
+//  43
+  public function GetAllOptions()
+    {
+      $sql = 'SELECT * FROM options';
+      $res = mysqli_query($this->link, $sql);
+      while ($arRes = mysqli_fetch_assoc($res))
+        $arResult[] = $arRes;
+      return $arResult;
+    }
 
   public function SetData()
   {

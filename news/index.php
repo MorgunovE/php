@@ -12,8 +12,13 @@ $arParams = [
   'ORDERBY' => 'DATE',
   'ORDER' => 'DESC'
 ];
-
 include('../view/header.php');
-$result = $page->SetPage('news', $arParams);
+  if(isset($_GET['id'])){
+    $arParams['news_id'] = $_GET['id'];
+    $result = $page->SetPage('single-news', $arParams);
+  }else{
+    $result = $page->SetPage('news', $arParams);
 //pr ( $result );
+  }
+
 include('../view/footer.php');

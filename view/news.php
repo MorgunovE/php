@@ -30,17 +30,21 @@
         <div class="row">
             <div class="col-lg-8">
 <!--              27-->
-              <? foreach ($arResult as $item) {
+              <? foreach ( $arResult as $item ) {
 //                $first = mb_substr($item['text'], 0, 100, 'UTF-8');
-                $array = explode(' ', $item['text']);
-                $array = array_slice($array, 0, 15);
-                $previewText = implode(' ', $array);
+                $array = explode ( ' ', $item[ 'text' ] );
+                $array = array_slice ( $array, 0, 15 );
+                $previewText = implode ( ' ', $array );
 //                echo $previewText. "...";
-                $newsDate = date('d M Y', strtotime($item['date']));
+                $newsDate = date ( 'd M Y', strtotime ( $item[ 'date' ] ) );
                 ?>
-                  <div class="blog-item mb-60">
+                <div class="blog-item mb-60">
                       <div class="blog-thumb">
-                          <img src="../view/assets/images/blog-3.png" alt="blog image">
+<!--                        36-->
+                        <a href="/news/?id=<?= $item[ 'id' ] ?>">
+<!--                        35-->
+                          <img src="../view/assets/images/<?= $item[ 'img' ] ?>" alt="blog image">
+                        </a>
                       </div>
                       <div class="blog-content blog-content--style2">
                           <div class="meta-post d-flex flex-wrap">
@@ -51,13 +55,15 @@
                                   <a href="#"><i class="fas fa-calendar-alt"></i> <span><?= $newsDate ?></span></a>
                               </div>
                           </div>
-                          <h5 class="title"><a href="blog-details.html"><?= $item['title'] ?></a></h5>
+                        <!--                        36-1-->
+                          <h5 class="title"><a href="/news/?id=<?= $item[ 'id' ] ?>"><?= $item[ 'title' ] ?></a></h5>
                           <p><?= $previewText . '...' ?></p>
-                          <a href="blog-details.html" class="cmn-btn">Read More</a>
+                        <!--                        36-2-->
+                          <a href="/news/?id=<?= $item[ 'id' ] ?>" class="cmn-btn">Read More</a>
                       </div>
                   </div>
               <? }; ?>
-                <div class="row">
+              <div class="row">
                     <ul class="pagination">
                         <li><a href="#">01</a></li>
                         <li><a href="#">02</a></li>

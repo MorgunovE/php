@@ -31,3 +31,18 @@
 31. add index.php
 32. add main in controller
 33. add main php in view
+34. add img in mysql news
+35. add img in news php
+36. add a in news php
+37. add single news in controller
+38. add single page in model
+39. add options in mysql
+40. add getoptions in model
+41. add admin php
+42. add admin nes options users in view
+43. add GetAllOptions() in model
+44. add GetAllOptions () in controller
+45. add GetAllOptions () in admin-options php
+46. add SetOptions in admin-options php
+47. add SetOptions in controller
+48. add SetOptions in model
