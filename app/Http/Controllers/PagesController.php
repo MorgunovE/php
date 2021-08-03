@@ -2,7 +2,10 @@
   
   namespace App\Http\Controllers;
   
+  use App\Models\Todo;
   use Illuminate\Http\Request;
+  use Illuminate\Http\Str;
+  
   
   class PagesController extends Controller
   {
@@ -17,14 +20,35 @@
         'skills' => $skills,
       ];
       if ( 1 == 1 ) {
-        $res[ 'test' ] = "test";
+        $res[ 'test' ] = "Str::random(10)";
       }
       return view ( 'hello', $res );
     }
     
     public function todos ()
     {
-      return view ( 'todos' );
+//      39
+//      $todo = new Todo();
+//
+//      $todo -> title = "Read book";
+//      $todo -> note = "read from 99 page";
+//
+//      $todo = $todo -> save ();
+//      40
+//      $todo = Todo ::create ( [
+//        "title" => 'Read book',
+//        "note" => 'read from 99 page'
+//      ] );
+//      43
+      $todos = Todo ::all ();
+
+//      dd($todo);
+//      dd($todos);
+
+//      43-1
+      return view ( 'todos', [
+        "todos" => $todos
+      ] );
     }
     
   }

@@ -34,3 +34,11 @@
 34. add parameters table
 35. php artisan migrate
 36. if add something in database php artisan migrate:refresh
+37. php artisan make:model Todo
+38. model = app Models
+39. add code in PagesController for model for saving
+40. add new code in PagesController for model for saving
+41. add code in model Todo for saving
+42. add code for list in todos blade
+43. add code for list in PagesController
+44.37-59
