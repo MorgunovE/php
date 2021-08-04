@@ -94,3 +94,23 @@
 94. for auth composer require laravel/ui
 95. php artisan ui vue --auth
 96. npm install && npm run dev normal with error on dev because sudo
+97. php artisan migrate
+98. php artisan route:list
+99. auth = app http controllers auth
+100. resources views auth register
+101. add method in REgisterController to change page
+102. add new input in register blade
+103. add new input in migration users
+104. php artisan migrate:refresh
+105. add input in registerCOntroler
+106. add input in User Model
+107. add method enter in loginCOntroller from AuthentificatorUsers
+108. change email to login in login blade
+109. logout in layouts app blade
+110. add test blade
+111. add controller php artisan make:controller PagesController but he existed right now
+112. add test in web add middleware
+113. for user information auth user in test blade
+114. for user information add code in PagesController
+115. add useer in test blade
+116. change home to test page in loginCOntrollers RouteServiceProvider

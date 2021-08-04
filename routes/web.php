@@ -73,7 +73,16 @@
   Route ::post ( '/article/update', [
     ArticleController::class, 'update'
   ] );
-
-Auth::routes();
+//  112
+//  Route ::get ( '/test', [
+//    PagesController::class, 'test'
+//  ] )->middleware ('auth');
+  
+  Route ::get ( '/test', [
+    PagesController::class, 'test'
+  ] );
+  
+  
+  Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

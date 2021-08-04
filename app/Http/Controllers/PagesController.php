@@ -7,8 +7,9 @@
   use App\Models\Todo;
   use Illuminate\Http\Request;
   use Illuminate\Http\Str;
-  
-  
+  use Illuminate\Support\Facades\Auth;
+
+
   class PagesController extends Controller
   {
 //  28
@@ -125,5 +126,13 @@
       return view ( 'article_update', [
         'article' => $article,
       ] );
+    }
+//    111
+    public function test ()
+    {
+//      114
+      return view ( 'test', [
+        "user"=> Auth::user ()
+      ]);
     }
   }
