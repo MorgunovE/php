@@ -16,9 +16,9 @@
   |
   */
   
-//  Route ::get ( '/', function () {
-//    return view ( 'welcome' );
-//  } );
+  Route ::get ( '/', function () {
+    return view ( 'welcome' );
+  } );
 //    9
 
 //    Route ::get ( '/hello', function () {
@@ -73,3 +73,7 @@
   Route ::post ( '/article/update', [
     ArticleController::class, 'update'
   ] );
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

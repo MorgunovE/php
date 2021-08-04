@@ -90,3 +90,7 @@
 90. script for ajax in blog blade
 91. add meta in app blade in layout
 92. add token in script for ajax in blog blade
+93. auth
+94. for auth composer require laravel/ui
+95. php artisan ui vue --auth
+96. npm install && npm run dev normal with error on dev because sudo

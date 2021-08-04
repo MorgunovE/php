@@ -18,7 +18,7 @@
           $table -> id ();
 //        34
           $table -> string ( 'title', 250 ) -> nullable () -> unique ();
-          $table -> text ( 'note' ) -> nullable ();
+//          $table -> text ( 'note' ) -> nullable ();
           $table -> unsignedInteger ( 'status' ) ->default ( 0 );
           $table -> timestamps ();
         } );
