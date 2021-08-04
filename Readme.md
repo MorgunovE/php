@@ -49,3 +49,44 @@
 49. add methods done and not_done in PagesController
 50. add mysql in todos blade
 51. add model and migration = php artisan make:model Hack -m
+52. add Articles blade
+53. add Articles in web
+54. add blogPage in PagesController
+55. add list in blog blade
+56. add model and migration = php artisan make:model Article -m
+57. php artisan migrate:refresh
+58. add code list in PagesController
+59. add list in blog blade
+60. add route in web
+61 add articlePage in PagesController
+62. add article blade
+63. php artisan make:model Comment -m
+64. php artisan migrate
+65. add list in article blade
+66. add comments in PagesController
+67. add foreach in article blade
+68. add method comments in article model
+69. add comments in PagesController
+70. add article comments in article blade
+71. add form in blog blade
+72. add post route in web
+73 add controller php artisan make:controller ArticleController
+74. add method in ArticleController
+75. add controller ArticleController in web
+76. add csrf in blog blade for token
+77. add Request in ArticleController
+78. add fields in article model
+79. add button in blog blade
+80. add /article/delete in web
+81. add destroy in ArticleController
+82. add change article in blog blade
+83. /article/{{$article->id}}/update in web
+84. add articleUpdatePage in PagesController
+85. add article_update.blade.php
+86. add form in article_update.blade.php
+87. add /article/update in web
+88. add method update in ArticleController
+89. add name for route name('article') in web
+90. script for ajax in blog blade
+91. add meta in app blade in layout
+92. add token in script for ajax in blog blade

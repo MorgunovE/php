@@ -3,6 +3,8 @@
   use Illuminate\Support\Facades\Route;
 //  29-1
   use App\Http\Controllers\PagesController;
+//  75
+  use App\Http\Controllers\ArticleController;
   /*
   |--------------------------------------------------------------------------
   | Web Routes
@@ -43,10 +45,31 @@
 //    ] );
 //  } );
 //  29
-  Route ::get ( '/hello', [PagesController::class, "helloPage"] );
-  Route ::get ( '/todos', [PagesController::class, "todos"] );
+  Route ::get ( '/hello', [PagesController::class, "helloPage"] )->name('hello');
+  Route ::get ( '/todos', [PagesController::class, "todos"] )->name('todos');
 //  48
   Route ::get ( '/todos/done', [PagesController::class, "todosDone"] );
   Route ::get ( '/todos/not-done', [PagesController::class, "todosNotDone"] );
-  
 //  Route ::get ( '/test', [ PagesController::class, 'testPage' ] );
+
+//53
+  Route ::get ( '/blog', [ PagesController::class, 'blogPage' ] )->name('blog');
+  Route ::get ( '/article/{id}', [ PagesController::class, 'articlePage' ] );
+//  72
+  Route::post('/article', [
+//  75-1
+    ArticleController::class, "store"
+//    89
+  ])->name('article');
+//  80
+  Route::post('/article/delete', [
+    ArticleController::class, "destroy"
+  ]);
+//  83
+  Route ::get ( '/article/{id}/update', [
+    PagesController::class, 'articleUpdatePage'
+  ] );
+//  87
+  Route ::post ( '/article/update', [
+    ArticleController::class, 'update'
+  ] );

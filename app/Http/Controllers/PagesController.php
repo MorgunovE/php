@@ -2,6 +2,8 @@
   
   namespace App\Http\Controllers;
   
+  use App\Models\Article;
+  use App\Models\Comment;
   use App\Models\Todo;
   use Illuminate\Http\Request;
   use Illuminate\Http\Str;
@@ -85,5 +87,43 @@
         'todos' => $todos
       ] );
     }
-    
+
+//    54
+    public function blogPage ()
+    {
+      $articles = Article ::all ();
+      return view ( 'blog', [
+//        58
+        'articles' => $articles
+      ] );
+    }
+
+//    61
+    public function articlePage ( $id )
+    {
+//      dd ( $id );
+      $article = Article ::find ( $id );
+      if ( !$article ) {
+        return abort ( 404 );
+      }
+//      66
+//      $comments = Comment ::where ( 'article_id', $id )->get();
+      return view ( 'article', [
+        'article' => $article,
+//        66-1
+//        'comments' => $comments,
+      ] );
+    }
+
+//    84
+    public function articleUpdatePage ( $id )
+    {
+      $article = Article ::find ( $id );
+      if ( !$article ) {
+        return abort ( 404 );
+      }
+      return view ( 'article_update', [
+        'article' => $article,
+      ] );
+    }
   }
