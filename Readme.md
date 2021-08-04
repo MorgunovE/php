@@ -41,4 +41,11 @@
 41. add code in model Todo for saving
 42. add code for list in todos blade
 43. add code for list in PagesController
-44.37-59
+44. add code for list todo blade
+45. add change list in PagesController
+46. delete list el in PagesController
+47. add a in todos
+48. add pages done and not_done in web
+49. add methods done and not_done in PagesController
+50. add mysql in todos blade
+51. add model and migration = php artisan make:model Hack -m

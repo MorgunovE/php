@@ -45,4 +45,8 @@
 //  29
   Route ::get ( '/hello', [PagesController::class, "helloPage"] );
   Route ::get ( '/todos', [PagesController::class, "todos"] );
+//  48
+  Route ::get ( '/todos/done', [PagesController::class, "todosDone"] );
+  Route ::get ( '/todos/not-done', [PagesController::class, "todosNotDone"] );
+  
 //  Route ::get ( '/test', [ PagesController::class, 'testPage' ] );

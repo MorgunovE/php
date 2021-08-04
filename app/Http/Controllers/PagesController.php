@@ -39,6 +39,22 @@
 //        "title" => 'Read book',
 //        "note" => 'read from 99 page'
 //      ] );
+
+//      45
+//      $todo = Todo::find(1);
+////      dd($todo);
+//      if($todo){
+//        $todo->status = 1;
+//        $todo->save ();
+//      }
+
+//      46
+//      $todo = Todo ::find ( 8 );
+//      if ( $todo ) {
+//        $todo -> delete ();
+//      }
+
+
 //      43
       $todos = Todo ::all ();
 
@@ -48,6 +64,25 @@
 //      43-1
       return view ( 'todos', [
         "todos" => $todos
+      ] );
+    }
+
+//    49
+    public function todosDone ()
+    {
+      $todos = Todo ::where ( 'status', 1 ) -> get ();
+//      $todos = Todo ::where ( 'status', 1 ) -> first ();
+      return view ( 'todos_done', [
+        'todos' => $todos
+      ] );
+    }
+    
+    public function todosNotDone ()
+    {
+      $todos = Todo ::where ( 'status', 0 ) -> get ();
+//      $todos = Todo ::where ( 'status', 0 )-> where('title', 'Read book') -> get ();
+      return view ( 'todos_not_done', [
+        'todos' => $todos
       ] );
     }
     
