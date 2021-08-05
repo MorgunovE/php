@@ -114,3 +114,26 @@
 114. for user information add code in PagesController
 115. add useer in test blade
 116. change home to test page in loginCOntrollers RouteServiceProvider
+117. copy gome to admin
+118. add route in web
+119. add method for admin in PagesController
+120. add group in migration users
+121. php artisan migrate:refresh
+122. add middleware in route
+123. php artisan make:middleware AdminMiddleware = app http middleware
+124. add auth in AdminMiddleware
+125. add group in models User
+126. register middleware in Kernel
+127. change auth to admin in web
+128. php artisan make:model Article -m but it has
+129. add content in migration
+130. add content in Article model
+131. php artisan migrate or php artisan migrate:refresh
+132. api route has url/api/url
+133. app providers RouteServiceProvider prefix api
+134. add route in api
+135. php artisan make:controller Api/ArticlesController
+136. add controller in api
+137. add method showArticles in controllers ArticlesController 
+138. install local postman
+139. http://127.0.0.1:8000//api/articles

@@ -20,7 +20,9 @@ class User extends Authenticatable
 //      106
         'login',
         'dob',
-      
+//      125
+        'group',
+    
         'name',
         'email',
         'password',

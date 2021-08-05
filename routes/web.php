@@ -82,7 +82,13 @@
     PagesController::class, 'test'
   ] );
   
+  Route ::get ( '/art', [
+    PagesController::class, 'art'
+  ] );
   
   Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//118
+//  127
+Route::get('/admin', [App\Http\Controllers\PagesController::class, 'admin'])->name('admin')->middleware (['auth', 'admin']);

@@ -8,8 +8,8 @@
   use Illuminate\Http\Request;
   use Illuminate\Http\Str;
   use Illuminate\Support\Facades\Auth;
-
-
+  
+  
   class PagesController extends Controller
   {
 //  28
@@ -127,12 +127,24 @@
         'article' => $article,
       ] );
     }
+
 //    111
     public function test ()
     {
 //      114
       return view ( 'test', [
-        "user"=> Auth::user ()
-      ]);
+        "user" => Auth ::user ()
+      ] );
+    }
+
+//  119
+    public function admin ()
+    {
+//      122
+      return view ( 'admin' );
+    }
+    public function art ()
+    {
+      return view ( 'art' );
     }
   }

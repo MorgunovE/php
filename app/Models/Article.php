@@ -10,7 +10,8 @@ class Article extends Model
     use HasFactory;
 //    78
   protected $fillable = [
-    'title', 'body'
+//    130
+    'title', 'body', 'content',
   ];
 //    68
     public function comments()
