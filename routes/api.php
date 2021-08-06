@@ -23,4 +23,8 @@ Route::get('/articles', [ArticlesController::class, "showArticles"] );
 //141
 Route ::get ( '/articles/{id}', [ ArticlesController::class, 'showArticle' ] );
 //146
-  Route ::post ( '/articles', [ ArticlesController::class, 'storeArticle' ] );
+Route ::post ( '/articles', [ ArticlesController::class, 'storeArticle' ] );
+//152
+Route::put('/articles/{id}', [ArticlesController::class, 'putArticle']);
+//154
+Route::patch('/articles/{id}', [ArticlesController::class, 'patchArticle']);

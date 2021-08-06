@@ -148,4 +148,14 @@
 148. use Validator in ArticlesController
 149. add code for form in art blade
 150. add function for send in art blade
-151. add errors in in art blade
+151. add errors in art blade
+152. add PUT method in api
+153. add putArticle in ArticlesController
+154. add path in api
+155. add patchArticle in ArticlesController
+156. add modal in art blade
+157. add bootstrap from https://www.jsdelivr.com/package/npm/bootstrap?path=dist in art blade
+158. add method for fields in art blade and in button
+159. add hidden for fields in art blade
+160. add updateArticle in art blade
+161. 15: 30-38

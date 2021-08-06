@@ -48,10 +48,10 @@
         'body' => [ 'required', 'string' ],
       ] );
       if ( $validator -> fails () ) {
-        return response () ->json ( [
-          "status"=>false,
-          "errors" => $validator->messages()
-        ])->setStatusCode ( 422);
+        return response () -> json ( [
+          "status" => false,
+          "errors" => $validator -> messages ()
+        ] ) -> setStatusCode ( 422 );
       }
       
       $article = Article ::create ( [
@@ -62,5 +62,83 @@
         "status" => true,
         "article" => $article
       ] ) -> setStatusCode ( 201, "Article post created" );
+    }
+
+//    153
+    public function putArticle ( $id, Request $request )
+    {
+      $request_data = $request -> only ( [ 'title', 'content', 'body' ] );
+      $validator = Validator ::make ( $request_data, [
+        'title' => [ 'required', 'string' ],
+        'content' => [ 'required', 'string' ],
+        'body' => [ 'required', 'string' ],
+      ] );
+      if ( $validator -> fails () ) {
+        return response () -> json ( [
+          'status' => false,
+          'errors' => $validator -> messages ()
+        ] ) -> setStatusCode ( 422 );
+      }
+      $article = Article ::find ( $id );
+      if ( !$article ) {
+        return response () -> json ( [
+          'status' => false,
+          'message' => "Article Not Found"
+        ] ) -> setStatusCode ( 404, "Article Not Found" );
+      }
+      $article -> title = $request_data[ 'title' ];
+      $article -> content = $request_data[ 'content' ];
+      $article -> body = $request_data[ 'body' ];
+      $article -> save ();
+      return response () -> json ( [
+        'status' => true,
+        'message' => 'Article updated'
+      ] ) -> setStatusCode ( 200, 'Article updated' );
+    }
+
+//    155
+    public function patchArticle ( $id, Request $request )
+    {
+//    dd ( $request);
+      $request_data = $request -> only ( [ 'title', 'content', 'body' ] );
+//      dd ( $request_data);
+      if(count($request_data) === 0) {
+        return response () -> json ( [
+          'status' => false,
+          'Message' => "All fields is empty"
+        ] ) -> setStatusCode ( 422, "All fields is empty" );
+      }
+      $rules_const = [
+        'title' => [ 'required', 'string' ],
+        'content' => [ 'required', 'string' ],
+        'body' => [ 'required', 'string' ],
+      ];
+      $rules = [];
+      foreach ( $request_data as $key => $data ) {
+        $rules[$key] = $rules_const[$key];
+      }
+//      dd ( $rules);
+      $validator = Validator ::make ( $request_data, $rules );
+      if ( $validator -> fails () ) {
+        return response () -> json ( [
+          'status' => false,
+          'errors' => $validator -> messages ()
+        ] ) -> setStatusCode ( 422 );
+      }
+      $article = Article ::find ( $id );
+      if ( !$article ) {
+        return response () -> json ( [
+          'status' => false,
+          'message' => 'Article Not Found'
+        ] ) -> setStatusCode ( 404, 'Article Not Found' );
+      }
+      foreach ( $request_data as $key => $data ) {
+        $article->$key = $data;
+      }
+      $article -> save ();
+      return response () -> json ( [
+        'status' => true,
+        'message' => 'Article updated'
+      ] ) -> setStatusCode ( 200, 'Article updated' );
     }
   }
