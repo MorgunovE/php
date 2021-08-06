@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Api\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 //  134
-Route::get('/articles', [ArticleController::class, "showArticles"] );
+Route::get('/articles', [ArticlesController::class, "showArticles"] );
+//141
+Route ::get ( '/articles/{id}', [ ArticlesController::class, 'showArticle' ] );

@@ -137,3 +137,9 @@
 137. add method showArticles in controllers ArticlesController 
 138. install local postman
 139. http://127.0.0.1:8000//api/articles
+140. add response in ArticlesController
+141. get 1 post with id add route in api
+142. add showArticle in ArticlesController
+143. add card in art
+144. add jquery in art blade
+145. add ajax in art blade
