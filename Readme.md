@@ -143,3 +143,9 @@
 143. add card in art
 144. add jquery in art blade
 145. add ajax in art blade
+146. add post in api
+147. add storeArticle in ArticlesController
+148. use Validator in ArticlesController
+149. add code for form in art blade
+150. add function for send in art blade
+151. add errors in in art blade

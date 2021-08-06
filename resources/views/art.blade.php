@@ -36,6 +36,26 @@
 								  </div>
 								</div>
 	            </div>
+	            {{--	            149--}}
+	            <div class="container p-4">
+		            <form>
+								  <div class="mb-3">
+								    <label for="title" class="form-label">Article title</label>
+								    <input type="text" class="form-control" id="title">
+								  </div>
+			            <div class="alert alert-danger d-none" id="title-error" role="alert">
+									  
+									</div>
+								  <div class="mb-3">
+								    <label for="content" class="form-label">Article content</label>
+								    <input type="text" class="form-control" id="content">
+								  </div>
+			            <div class="alert alert-danger d-none" id="content-error" role="alert">
+									  
+									</div>
+								  <button type="button" class="btn btn-primary" onclick="storeArticle()">Submit</button>
+								</form>
+	            </div>
             </div>
         </div>
     </div>
@@ -54,7 +74,7 @@
         success ( data ) {
           for ( let index in data ) {
             $ ( '.articles' ).append ( `
-						<div class="col">
+						<div class="col-6 mt-3">
 							<div class="card">
 							  <div class="card-body">
 							    <h5 class="card-title">${ data[ index ].title }</h5>
@@ -76,9 +96,51 @@
           dataType : 'json',
           success ( data ) {
             console.log ( data );
-            $('.article-title').text(data.title);
-            $('.article-content').text(data.content);
-            $('.full-article').removeClass('d-none');
+            $ ( '.article-title' ).text ( data.title );
+            $ ( '.article-content' ).text ( data.content );
+            $ ( '.full-article' ).removeClass ( 'd-none' );
+          }
+        } )
+      }
+
+      // 150
+      function storeArticle () {
+        const title = $ ( '#title' ),
+          content = $ ( '#content' );
+        $('#title-error').addClass('d-none');
+        $('#content-error').addClass('d-none');
+        $.ajax ( {
+          url : "http://127.0.0.1:8000/api/articles",
+          type : "post",
+          dataType : "json",
+          data : {
+            title : title.val (),
+            content : content.val (),
+            body : content.val (),
+          },
+          error ( err ) {
+            // 151
+            const data = err.responseJSON
+            for ( let key in err.responseJSON.errors ) {
+              let error_text = err.responseJSON.errors[ key ][ 0 ]
+              $ ( `#${ key }-error` ).removeClass ( 'd-none' ).text ( error_text )
+            }
+          },
+          success ( data ) {
+            console.log ( data );
+            title.val ( '' );
+            content.val ( '' );
+            $ ( '.articles' ).append ( `
+						<div class="col-6 mt-3">
+							<div class="card">
+							  <div class="card-body">
+							    <h5 class="card-title">${ data.article.title }</h5>
+							    <p class="card-text">${ data.article.content.slice ( 0, 20 ) }...</p>
+							    <a href="#" class="btn btn-primary" onclick="fullArticle(${ data.article.id })">Show</a>
+							  </div>
+							</div>
+						</div>
+            ` )
           }
         } )
       }

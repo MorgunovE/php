@@ -22,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/articles', [ArticlesController::class, "showArticles"] );
 //141
 Route ::get ( '/articles/{id}', [ ArticlesController::class, 'showArticle' ] );
+//146
+  Route ::post ( '/articles', [ ArticlesController::class, 'storeArticle' ] );
