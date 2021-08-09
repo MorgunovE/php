@@ -158,4 +158,9 @@
 158. add method for fields in art blade and in button
 159. add hidden for fields in art blade
 160. add updateArticle in art blade
-161. 15: 30-38
+161. add on button updateArticle in art blade
+162. add loadArticles in art blade
+163. add route delete in api
+164. add deleteArticle in ArticlesController
+165. add delete button 
+166. add deleteArticle in art blade

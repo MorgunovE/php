@@ -28,3 +28,5 @@ Route ::post ( '/articles', [ ArticlesController::class, 'storeArticle' ] );
 Route::put('/articles/{id}', [ArticlesController::class, 'putArticle']);
 //154
 Route::patch('/articles/{id}', [ArticlesController::class, 'patchArticle']);
+//163
+Route::delete('/articles/{id}', [ArticlesController::class, 'deleteArticle']);
