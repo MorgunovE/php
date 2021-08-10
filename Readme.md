@@ -183,3 +183,19 @@
 183. php artisan make:resource CommentCollection
 184. change params in resource Comment
 185. change params in resource Article
+186. add token in user migration
+187. php artisan migrate:refresh
+188. php artisan make:controller UserController
+189. add register method in UserController
+190. add token in User model
+191. add post in api
+192. add login in UserController
+193. add login in api
+194. add test route in api
+195. php artisan make:middleware BearerAuth
+196. add method in BearerAuth
+197. add BearerAuth in Kernel
+198. add middleware in api
+199. add construct in ArtController
+200. add function in welcome view
+201. 52-39

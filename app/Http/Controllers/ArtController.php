@@ -5,14 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Comment;
 use Illuminate\Http\Request;
+
 //178
 use App\Http\Resources\Article as ArticleResource;
+
 //181
 use App\Http\Resources\ArticleCollection;
+
 class ArtController extends Controller
 {
   //  175-1
   private $articlesList = [];
+
+  //  199
+  public function __construct()
+  {
+    $this->middleware('bearer-auth')->only(['store']);
+  }
 
   /**
    * Display a listing of the resource.
@@ -22,26 +31,26 @@ class ArtController extends Controller
   public function index()
   {
     //    175
-//    $articles = Article::all();
+    //    $articles = Article::all();
     return response()->json([
-//      181-1
+      //      181-1
       'articles' => new ArticleCollection(Article::all()),
     ]);
-//    foreach($articles as $article) {
-//      $comments = $article->comments();
-//      $commentsList = [];
-//      foreach($comments as $comment) {
-//        $commentsList[] = $comment->body;
-//      }
-//      $this->articlesList[] = [
-//        "id"       => $article->id,
-//        "title"    => $article->title,
-//        "content"  => $article->body,
-//        "body"     => $article->body,
-//        "comments" => $commentsList
-//      ];
-//    }
-//    return $this->articlesList;
+    //    foreach($articles as $article) {
+    //      $comments = $article->comments();
+    //      $commentsList = [];
+    //      foreach($comments as $comment) {
+    //        $commentsList[] = $comment->body;
+    //      }
+    //      $this->articlesList[] = [
+    //        "id"       => $article->id,
+    //        "title"    => $article->title,
+    //        "content"  => $article->body,
+    //        "body"     => $article->body,
+    //        "comments" => $commentsList
+    //      ];
+    //    }
+    //    return $this->articlesList;
   }
 
   /**
@@ -82,7 +91,7 @@ class ArtController extends Controller
     //    171
     //    return Article::find($id);
     //    179
-//    $article = Article::find($id);
+    //    $article = Article::find($id);
     //    return new ArticleResource($article);
     return response()->json([
       "article" => new ArticleResource(Article::find($id)),
