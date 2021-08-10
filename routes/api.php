@@ -30,3 +30,7 @@ Route::put('/articles/{id}', [ArticlesController::class, 'putArticle']);
 Route::patch('/articles/{id}', [ArticlesController::class, 'patchArticle']);
 //163
 Route::delete('/articles/{id}', [ArticlesController::class, 'deleteArticle']);
+//168
+//Route::resource('art', \App\Http\Controllers\ArtController::class);
+//174
+Route::apiResource('art', \App\Http\Controllers\ArtController::class);

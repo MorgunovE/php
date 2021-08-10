@@ -164,3 +164,22 @@
 164. add deleteArticle in ArticlesController
 165. add delete button 
 166. add deleteArticle in art blade
+167. php artisan make:controller ArtController --resource
+168. add resource method in api
+169. php artisan route:list
+170. add params in store in ArtController
+171. add params in show in ArtControlle
+172. add params in update in ArtControlle
+173. add params in delete in ArtControlle
+174. add api recources in api only for operation
+175. change params in index in ArtController
+176. php artisan make:resource Article = http/resources
+177. add params in array in resource Article
+178. add resource Article in ArtController
+179. add ArticleResource in show in ArtController
+180. php artisan make:resource ArticleCollection
+181. add ArticleCollection in ArtController
+182. php artisan make:resource Comment
+183. php artisan make:resource CommentCollection
+184. change params in resource Comment
+185. change params in resource Article
