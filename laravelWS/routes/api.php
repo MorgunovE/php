@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+//225
+use App\Http\Controllers\MessagesController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->get('/user', function(Request $request) {
+  return $request->user();
 });
+Route::get('/messages', [MessagesController::class, 'index']);
+Route::post('/messages', [MessagesController::class, "store"]);
+

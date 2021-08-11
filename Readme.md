@@ -219,6 +219,13 @@
 216. add config in env APP_URL=http://127.0.0.1:8000
 217. php artisan websockets:serve
 218. php artisan route:list
+219. php artisan make:model Message -m
+220. add params in message migration
+221. php artisan migrate
+222. php artisan make:controller MessagesController
+223. add method in MessagesController
+224. add params in message model
+225. add route in api
 
 
 
