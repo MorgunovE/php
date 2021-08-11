@@ -199,4 +199,27 @@
 199. add construct in ArtController
 200. add function in welcome view
 201. add storage in welcome
-202. composer require beyondcode/laravel-websockets
+202. not working composer require beyondcode/laravel-websockets
+203. add websocket project = composer create-project laravel/laravel laravelWS
+204. cd laravelWS
+     /////now its om laravelWS
+205. composer require beyondcode/laravel-websockets
+206. del composer.lock
+207. composer require beyondcode/laravel-websockets --with-all-dependencies
+208. php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
+209. add bd ws /var/lib/mysql/ (Linux).
+210. php artisan migrate
+211. php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
+212. change broadcast drive in env BROADCAST_DRIVER=pusher PUSHER_APP_ID=623487
+     PUSHER_APP_KEY=Sirafim
+     PUSHER_APP_SECRET=Master
+213. https://beyondco.de/docs/laravel-websockets/basic-usage/pusher
+214. composer require pusher/pusher-php-server "~3.0"
+215. add config in config/broadcasting
+216. add config in env APP_URL=http://127.0.0.1:8000
+217. php artisan websockets:serve
+218. php artisan route:list
+
+
+
+
