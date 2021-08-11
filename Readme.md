@@ -226,7 +226,23 @@
 223. add method in MessagesController
 224. add params in message model
 225. add route in api
-
+226. 13-25
+227. add html
+228. add fetch in app js
+229. vue create WS
+230. add code in vue
+     /////laravelWS/html/ws$ //////
+231. npm i laravel-echo
+232. npm i pusher-js
+233. add code for echo in helloword app
+234. in laravelWS php artisan make:event NewMessage in app/events
+235. add in NewMessage ShouldBroadcastNow
+236. add construct in NewMessage
+237. change channel in NewMessage
+238. add method broadcastwith in NewMessage
+239. add event in MessagesController
+240. add code in helloword app
+241. end
 
 
 
